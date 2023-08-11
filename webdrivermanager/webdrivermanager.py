@@ -425,10 +425,7 @@ class ChromeDriverManager(WebDriverManagerBase):
         chromedriver_list = chrome_driver_objects['channels']['Stable']['downloads']['chromedriver']
 
         # Handle special case for 'win' to match the provided JSON structure
-        if self.os_name.lower() == "win":
-            platform = "{}{}".format(self.os_name.lower(), self.bitness)
-        else:
-            platform = "{}-{}".format(self.os_name.lower(), self.bitness)
+        platform = "{}{}".format(self.os_name.lower(), self.bitness)
 
         url = None
         filename = None
